@@ -1,26 +1,43 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<template>  
+  <div class="container-fluid">
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="https://www.upd8.com.br/content/agency2/images/logo_upd8_stick2.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+          UPD8
+        </a>
+      </div>
+    </nav>
+    <div class="row">
+      <div class="col-12">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Painel</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Clientes</li>
+          </ol>
+        </nav>
+      </div>
+      <div class="col-12">
+        <ClienteCrud></ClienteCrud>
+      </div>
+    </div>
+  </div>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'bootstrap';
+import 'popper.js';
+import ClienteCrud from './components/ClienteCrud.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ClienteCrud
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+
